@@ -32,7 +32,7 @@ public class MapReduceDriver {
     public static void main(String argv[]) {
         ProgramDriver programDriver = new ProgramDriver();
         try {
-            programDriver.addClass("union", UnionDriver.class, "File Union MapReduce Job");
+            programDriver.addClass("union", UnionDriver.class, "작은 파일들을 HDFS Block 단위로 묶는 MapReduce Job");
             programDriver.driver(argv);
             System.exit(Constants.JOB_SUCCESS);
         } catch (Throwable e) {

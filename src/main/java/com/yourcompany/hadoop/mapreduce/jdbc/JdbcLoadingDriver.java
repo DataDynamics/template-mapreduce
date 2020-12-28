@@ -61,7 +61,7 @@ public class JdbcLoadingDriver extends org.apache.hadoop.conf.Configured impleme
             } else if ("-output".equals(args[i])) {
                 FileOutputFormat.setOutputPath(job, new Path(args[++i]));
             } else if ("-jobName".equals(args[i])) {
-                job.getConfiguration().set("mapred.job.name", args[++i]);
+                job.getConfiguration().set("mapreduce.job.name", args[++i]);
             } else if ("-jdbcUrl".equals(args[i])) {
                 job.getConfiguration().set("url", args[++i]);
             } else if ("-jdbcDriverClass".equals(args[i])) {

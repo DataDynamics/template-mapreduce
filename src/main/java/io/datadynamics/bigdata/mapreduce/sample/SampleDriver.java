@@ -71,7 +71,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
             } else if ("-output".equals(args[i])) {
                 FileOutputFormat.setOutputPath(job, new Path(args[++i]));
             } else if ("-jobName".equals(args[i])) {
-                job.getConfiguration().set("mapred.job.name", args[++i]);
+                job.getConfiguration().set("mapreduce.job.name", args[++i]);
             } else if ("-columnToClean".equals(args[i])) {
                 job.getConfiguration().set("columnToClean", args[++i]);
             } else if ("-delimiter".equals(args[i])) {

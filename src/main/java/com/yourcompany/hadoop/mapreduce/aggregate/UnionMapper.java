@@ -25,7 +25,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 /**
- * Sample Mapper
+ * HDFS의 지정한 경로의 작은 파일들을 큰 단위의 파일들로 묶는 Mapper.
+ * 큰 단위로 묶는 경우 단위는 HDFS의 Block Size가 된다.
  *
  * @author Data Dynamics
  * @version 0.1
@@ -34,6 +35,7 @@ public class UnionMapper extends Mapper<LongWritable, Text, NullWritable, Text> 
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        // 파일의 ROW를 그대로 다시 기록하면 Mapper는 Block 단위로 파일을 분할하여 기록한다.
         context.write(NullWritable.get(), value);
     }
 

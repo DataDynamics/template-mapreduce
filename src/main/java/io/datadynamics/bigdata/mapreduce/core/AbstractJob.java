@@ -58,7 +58,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 추가적으로 MapReduce Job이 동작하기 위한 부가적인 파라미터는 다음과 같이 설정할 수 있다.
  * <p/>
  * <ul>
- * <li>-Dmapred.job.name=(name): Hadoop MapReduce Job의 이름. 기본으로 Driver 클래스명으로 설정.</li>
+ * <li>-Dmapreduce.job.name=(name): Hadoop MapReduce Job의 이름. 기본으로 Driver 클래스명으로 설정.</li>
  * <li>-Dmapred.output.compress={true,false}: 출력 압축 여부 (기본값 true)</li>
  * <li>-Dmapred.input.dir=(path): 입력 파일 또는 입력 디렉토리 (필수)</li>
  * <li>-Dmapred.output.dir=(path): 출력 파일 (필수)</li>
