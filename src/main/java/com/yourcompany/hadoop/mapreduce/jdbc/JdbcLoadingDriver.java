@@ -36,7 +36,7 @@ public class JdbcLoadingDriver extends org.apache.hadoop.conf.Configured impleme
 
     public int run(String[] args) throws Exception {
         Job job = Job.getInstance();
-        parseArguements(args, job);
+        parseArguments(args, job);
 
         job.setJarByClass(JdbcLoadingDriver.class);
 
@@ -54,7 +54,7 @@ public class JdbcLoadingDriver extends org.apache.hadoop.conf.Configured impleme
         return job.waitForCompletion(true) ? 0 : 1;
     }
 
-    private void parseArguements(String[] args, Job job) throws IOException {
+    private void parseArguments(String[] args, Job job) throws IOException {
         for (int i = 0; i < args.length; ++i) {
             if ("-input".equals(args[i])) {
                 FileInputFormat.addInputPaths(job, args[++i]);

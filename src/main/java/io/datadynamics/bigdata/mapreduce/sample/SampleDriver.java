@@ -46,7 +46,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
 
     public int run(String[] args) throws Exception {
         Job job = new Job();
-        parseArguements(args, job);
+        parseArguments(args, job);
 
         job.setJarByClass(SampleDriver.class);
 
@@ -64,7 +64,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
         return job.waitForCompletion(true) ? 0 : 1;
     }
 
-    private void parseArguements(String[] args, Job job) throws IOException {
+    private void parseArguments(String[] args, Job job) throws IOException {
         for (int i = 0; i < args.length; ++i) {
             if ("-input".equals(args[i])) {
                 FileInputFormat.addInputPaths(job, args[++i]);

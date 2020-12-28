@@ -67,7 +67,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
     public int run(String[] args) throws Exception {
         Job job = new Job();
 
-        int result = parseArguements(args, job);
+        int result = parseArguments(args, job);
         if (result != 0) {
             return result;
         }
@@ -88,7 +88,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
         return job.waitForCompletion(true) ? 0 : 1;
     }
 
-    private int parseArguements(String[] args, Job job) throws Exception {
+    private int parseArguments(String[] args, Job job) throws Exception {
         ////////////////////////////////////////
         // 옵션 목록을 구성하고 검증한다.
         ////////////////////////////////////////
