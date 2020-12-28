@@ -5,11 +5,7 @@ MapReduce Job 템플릿 프로젝트
 
 * JDK 1.7 이상
 * Apache Maven 3.x 이상
-  * Windows : http://ftp.daum.net/apache/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.zip
-  * Linux, MacOSX : http://ftp.daum.net/apache/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz
 * Apache Ant 1.8 이상
-  * Windows : http://ftp.daum.net/apache/ant/binaries/apache-ant-1.8.4-bin.zip
-  * Linux, MacOSX : http://ftp.daum.net/apache/ant/binaries/apache-ant-1.8.4-bin.tar.gz
 
 ## 소스코드 빌드 및 MapReduce Job JAR 파일 패키징
 
@@ -17,69 +13,62 @@ MapReduce Job 템플릿 프로젝트
 
 ```text
 #mvn package
-[INFO]
-[INFO] ------------------------------------------------------------------------
-[INFO] Building MapReduce Template 0.1-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO]
-[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ mapreduce-template ---
-[INFO] Deleting C:\Users\User\Desktop\mapreduce-template-0.1\target
-[INFO]
-[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ mapreduce-template ---
+[INFO] 
+[INFO] --------< io.datadynamics.hadoop.mapreduce:mapreduce-template >---------
+[INFO] Building MapReduce Job Template 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mapreduce-template ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
-[INFO]
-[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ mapreduce-template ---
-[INFO] Compiling 40 source files to C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
-[INFO]
-[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ mapreduce-template ---
-[debug] execute contextualize
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ mapreduce-template ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 48 source files to C:\Users\User\IdeaProjects\template-mapreduce\target\classes
+[WARNING] /C:/Users/User/IdeaProjects/template-mapreduce/src/main/java/io/datadynamics/bigdata/mapreduce/sample/SampleDriver.java: Some input files use or override a deprecated API.
+[WARNING] /C:/Users/User/IdeaProjects/template-mapreduce/src/main/java/io/datadynamics/bigdata/mapreduce/sample/SampleDriver.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /C:/Users/User/IdeaProjects/template-mapreduce/src/main/java/io/datadynamics/bigdata/mapreduce/util/StringUtils.java: C:\Users\User\IdeaProjects\template-mapreduce\src\main\java\io\datadynamics\bigdata\mapreduce\util\StringUtils.java uses unchecked or unsafe operations.
+[WARNING] /C:/Users/User/IdeaProjects/template-mapreduce/src/main/java/io/datadynamics/bigdata/mapreduce/util/StringUtils.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mapreduce-template ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO]
-[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ mapreduce-template ---
-[INFO] Compiling 1 source file to C:\Users\User\Desktop\mapreduce-template-0.1\target\test-classes
-[INFO]
-[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ mapreduce-template ---
-[INFO] Surefire report directory: C:\Users\User\Desktop\mapreduce-template-0.1\target\surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running io.datadynamics.bigdata.mapreduce.etl.groupby.GroupByMapReduceTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.6 sec
-
-Results :
-
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO]
-[INFO] --- maven-dependency-plugin:2.1:unpack (unpack) @ mapreduce-template ---
-[INFO] Configured Artifact: com.google.guava:guava:r09:jar
-[INFO] Configured Artifact: org.apache.mahout.commons:commons-cli:2.0-mahout:jar
-[INFO] Configured Artifact: commons-cli:commons-cli:1.2:jar
-[INFO] Configured Artifact: commons-lang:commons-lang:2.5:jar
-[INFO] Unpacking C:\Users\User\.m2\repository\com\google\guava\guava\r09\guava-r09.jar to
-  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
-   with includes null and excludes:null
-[INFO] Unpacking C:\Users\User\.m2\repository\org\apache\mahout\commons\commons-cli\2.0-mahout\commons-cli-2.0-mahout.jar to
-  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
-   with includes null and excludes:null
-[INFO] Unpacking C:\Users\User\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar to
-  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
-   with includes null and excludes:null
-[INFO] Unpacking C:\Users\User\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar to
-  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
-   with includes null and excludes:null
-[INFO]
-[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ mapreduce-template ---
-[INFO] Building jar: C:\Users\User\Desktop\mapreduce-template-0.1\target\mapreduce-template-0.1-SNAPSHOT.jar
+[INFO] skip non existing resourceDirectory C:\Users\User\IdeaProjects\template-mapreduce\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ mapreduce-template ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ mapreduce-template ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:unpack (unpack) @ mapreduce-template ---
+[INFO] Configured Artifact: com.google.guava:guava:27.0.1-jre:jar
+[INFO] Configured Artifact: commons-cli:commons-cli:1.4:jar
+[INFO] Configured Artifact: commons-lang:commons-lang:2.6:jar
+[INFO] Configured Artifact: org.springframework:spring-jdbc:5.3.2:jar
+[INFO] Configured Artifact: org.springframework:spring-core:5.3.2:jar
+[INFO] Configured Artifact: org.springframework:spring-beans:5.3.2:jar
+[INFO] Configured Artifact: org.springframework:spring-tx:5.3.2:jar
+[INFO] Configured Artifact: org.springframework:spring-tx:5.3.2:jar
+[INFO] Configured Artifact: org.postgresql:postgresql:42.2.18.jre7:jar
+[INFO] Configured Artifact: mysql:mysql-connector-java:5.1.49:jar
+[INFO] Unpacking C:\Users\User\.m2\repository\com\google\guava\guava\27.0.1-jre\guava-27.0.1-jre.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\org\springframework\spring-jdbc\5.3.2\spring-jdbc-5.3.2.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\org\springframework\spring-core\5.3.2\spring-core-5.3.2.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\org\springframework\spring-beans\5.3.2\spring-beans-5.3.2.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\org\springframework\spring-tx\5.3.2\spring-tx-5.3.2.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\org\springframework\spring-tx\5.3.2\spring-tx-5.3.2.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\org\postgresql\postgresql\42.2.18.jre7\postgresql-42.2.18.jre7.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] Unpacking C:\Users\User\.m2\repository\mysql\mysql-connector-java\5.1.49\mysql-connector-java-5.1.49.jar to C:\Users\User\IdeaProjects\template-mapreduce\target\classes with includes "" and excludes ""
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ mapreduce-template ---
+[INFO] Building jar: C:\Users\User\IdeaProjects\template-mapreduce\target\mapreduce-template-1.0.0-SNAPSHOT.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 9.110s
-[INFO] Finished at: Sun Feb 03 03:41:10 KST 2013
-[INFO] Final Memory: 21M/328M
+[INFO] Total time:  21.991 s
+[INFO] Finished at: 2020-12-28T21:57:40+09:00
 [INFO] ------------------------------------------------------------------------
 ```
 
@@ -148,7 +137,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
 
 #### 형식1
 
-이 형식은 가장 단순하게 구현할 수 있는 방법으로 parseArguements() 메소드에서 파라미터를 처리합니다. 항상 파라미터명 다음에 파라미터의 값을 지정해야 합니다. 다음 예제는 io.datadynamics.bigdata.mapreduce.sample.SampleDriver을 참고하시기 바랍니다.
+이 형식은 가장 단순하게 구현할 수 있는 방법으로 parseArguments() 메소드에서 파라미터를 처리합니다. 항상 파라미터명 다음에 파라미터의 값을 지정해야 합니다. 다음 예제는 io.datadynamics.bigdata.mapreduce.sample.SampleDriver을 참고하시기 바랍니다.
 
 ```java
 public class SampleDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
@@ -160,7 +149,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
 
     public int run(String[] args) throws Exception {
         Job job = new Job();
-        parseArguements(args, job);
+        parseArguments(args, job);
 
         job.setJarByClass(SampleDriver.class);
 
@@ -178,7 +167,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
         return job.waitForCompletion(true) ? 0 : 1;
     }
 
-    private void parseArguements(String[] args, Job job) throws IOException {
+    private void parseArguments(String[] args, Job job) throws IOException {
         for (int i = 0; i < args.length; ++i) {
             if ("-input".equals(args[i])) {
                 FileInputFormat.addInputPaths(job, args[++i]);
@@ -241,7 +230,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
     public int run(String[] args) throws Exception {
         Job job = new Job();
 
-        int result = parseArguements(args, job);
+        int result = parseArguments(args, job);
         if (result != 0) {
             return result;
         }
@@ -262,7 +251,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
         return job.waitForCompletion(true) ? 0 : 1;
     }
 
-    private int parseArguements(String[] args, Job job) throws Exception {
+    private int parseArguments(String[] args, Job job) throws Exception {
         ////////////////////////////////////////
         // 옵션 목록을 구성하고 검증한다.
         ////////////////////////////////////////
@@ -335,7 +324,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 Mapper를 작성할 때에는 Mapper 클래스를 상속하고 입출력 파라미터의 형식을 다음과 같이 Generic으로 정의합니다. 그리고 난 후 Eclipse 또는 IntelliJ IDEA에서 method override 기능을 이용하여 cleanup, map, setup 메소드를 오버라이드합니다. 이 때 정상적으로 오버라이드가 되었다면 @Override annotation을 추가했을 때 아무런 문제가 없어야 하며 @Override annotation은 반드시 추가하도록 합니다.
 
 ```java
-public class WordcountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     private String delimiter;
 
@@ -365,7 +354,7 @@ public class WordcountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
 Reducer를 작성할 때에는 Reducer 클래스를 상속하고 입출력 파라미터의 형식을 다음과 같이 Generic으로 정의합니다. 그리고 난 후 Eclipse 또는 IntelliJ IDEA에서 method override 기능을 이용하여 cleanup, map, setup 메소드를 오버라이드합니다. 이 때 정상적으로 오버라이드가 되었다면 @Override annotation을 추가했을 때 아무런 문제가 없어야 하며 @Override annotation은 반드시 추가하도록 합니다.
 
 ```java
-public class WordcountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     @Override
     protected void setup(Context context) throws IOException, InterruptedException {

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.datadynamics.hadoop.mapreduce</groupId>
     <artifactId>mapreduce-template</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>MapReduce Job Template</name>
     <description>MapReduce Job Template</description>
@@ -102,6 +102,7 @@
                         </goals>
                         <configuration>
                             <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                            <!-- TODO : MapReduce JAR 파일에 같이 포함시켜야 하는 경우 아래 항목을 변경합니다 -->
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>com.google.guava</groupId>

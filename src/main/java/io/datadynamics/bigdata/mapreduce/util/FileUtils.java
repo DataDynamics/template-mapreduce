@@ -18,7 +18,6 @@
 package io.datadynamics.bigdata.mapreduce.util;
 
 import com.google.common.base.Charsets;
-import com.google.common.io.Closeables;
 import com.google.common.io.Files;
 
 import java.io.*;
@@ -188,7 +187,7 @@ public class FileUtils {
                 writer.write('\n');
             }
         } finally {
-            Closeables.closeQuietly(writer);
+            writer.close();
         }
     }
 
