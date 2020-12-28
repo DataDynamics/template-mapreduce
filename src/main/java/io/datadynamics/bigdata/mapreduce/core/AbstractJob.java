@@ -117,7 +117,7 @@ public abstract class AbstractJob extends Configured implements Tool {
         if (getConf() == null) {
             setConf(new Configuration());
             // Flamingo MapReduce의 기본 설정 파일을 로딩하여 Hadoop Configuration을 구성한다.
-            getConf().addResource(getClass().getResource("/flamingo-mapreduce-site.xml"));
+            getConf().addResource(getClass().getResource("/mapreduce-site.xml"));
         }
     }
 
