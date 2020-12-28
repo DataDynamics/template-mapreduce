@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * Hadoop MapReduce Counter Utility.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class CounterUtils {

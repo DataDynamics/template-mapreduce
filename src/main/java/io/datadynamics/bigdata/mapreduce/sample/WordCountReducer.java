@@ -28,7 +28,7 @@ import java.util.Iterator;
  * Wordcount Reducer
  *
  * @version 0.1
- * @@author Data Dynamics
+ * @author Data Dynamics
  */
 public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 

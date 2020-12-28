@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * HDFS Utility.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class HdfsUtils {

@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * CSV Row Record Parser.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class CsvRowParser {

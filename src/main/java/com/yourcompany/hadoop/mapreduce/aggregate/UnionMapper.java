@@ -28,7 +28,7 @@ import java.io.IOException;
  * Sample Mapper
  *
  * @version 0.1
- * @@author Data Dynamics
+ * @author Data Dynamics
  */
 public class UnionMapper extends Mapper<LongWritable, Text, NullWritable, Text> {
 

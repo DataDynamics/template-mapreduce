@@ -44,7 +44,7 @@ import static io.datadynamics.bigdata.mapreduce.core.Constants.JOB_SUCCESS;
  * <li><tt>valueDelimiter (vd)</tt> - Group By시 아이템간 구분자 (선택) (기본값 ,)</li>
  * </ul>
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class GroupByDriver extends AbstractJob {

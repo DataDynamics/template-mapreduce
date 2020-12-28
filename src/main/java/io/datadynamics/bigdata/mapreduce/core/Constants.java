@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.core;
 /**
  * Hadoop MapReduce Job에서 사용하는 각종 상수를 정의한 상수 클래스.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class Constants {

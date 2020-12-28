@@ -26,7 +26,7 @@ import java.io.*;
 /**
  * File Utility.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class FileUtils {

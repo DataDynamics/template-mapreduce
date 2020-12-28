@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.core;
 /**
  * 범용적으로 사용하는 구분자를 표현하는 Enumeration.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public enum Delimiter {

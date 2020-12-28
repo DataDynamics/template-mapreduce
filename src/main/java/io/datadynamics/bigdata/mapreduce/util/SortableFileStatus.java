@@ -22,7 +22,7 @@ import org.apache.hadoop.fs.FileStatus;
 /**
  * 날짜를 기반으로 정렬 기능을 제공하는 Hadoop {@link org.apache.hadoop.fs.FileStatus}.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class SortableFileStatus implements Comparable<SortableFileStatus> {

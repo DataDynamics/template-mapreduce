@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * 지정한 키로 Group By하여 하나의 ROW 키와 값을 취합하는 Transpose ETL 리듀서
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class GroupByReducer extends Reducer<Text, Text, NullWritable, Text> {

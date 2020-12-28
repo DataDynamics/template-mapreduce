@@ -35,7 +35,7 @@ import java.io.IOException;
  * </pre>
  *
  * @version 0.1
- * @@author Data Dynamics
+ * @author Data Dynamics
  */
 public class SampleDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
 

@@ -31,7 +31,7 @@ import org.apache.hadoop.util.ToolRunner;
  * Command Line Parser를 이용한 Hadoop MapReduce Sample Driver.
  *
  * @version 0.1
- * @@author Data Dynamics
+ * @author Data Dynamics
  */
 public class Sample2Driver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
 

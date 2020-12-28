@@ -42,7 +42,7 @@ import java.io.IOException;
  *     counter.increment(1);
  * </pre>
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class LineCountMapper extends Mapper<LongWritable, Text, NullWritable, NullWritable> {

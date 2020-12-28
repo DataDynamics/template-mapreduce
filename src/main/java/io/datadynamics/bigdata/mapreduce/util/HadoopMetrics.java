@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * Hadoop MapReduce Metrics Resource Bundle.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class HadoopMetrics {

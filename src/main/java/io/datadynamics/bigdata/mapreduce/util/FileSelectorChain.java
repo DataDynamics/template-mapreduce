@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * 하나 이상의 File Selector를 이용하여 지정한 파일의 Upload할 HDFS 경로를 반환하는 File Selector Chain.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class FileSelectorChain implements io.datadynamics.bigdata.mapreduce.util.FileSelector {

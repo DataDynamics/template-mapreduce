@@ -20,7 +20,7 @@ package com.yourcompany.hadoop.mapreduce;
 /**
  * MapReduce Job 상수.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class Constants {

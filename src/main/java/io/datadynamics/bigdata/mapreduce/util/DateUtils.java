@@ -28,7 +28,7 @@ import java.util.*;
 /**
  * Date Utility.
  *
- * @@author Data Dynamics
+ * @author Data Dynamics
  * @since 0.1
  */
 public class DateUtils {
