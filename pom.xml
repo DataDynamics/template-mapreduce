@@ -9,8 +9,6 @@
 	<packaging>jar</packaging>
 	<name>MapReduce Job Template</name>
 	<description>MapReduce Job Template</description>
-	<url>http://www.opencloudengine.org</url>
-	<inceptionYear>2011</inceptionYear>
 
 	<properties>
 		<!-- Project -->
@@ -115,34 +113,9 @@
 							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.apache.pdfbox</groupId>
-									<artifactId>fontbox</artifactId>
-									<version>1.8.2</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.pdfbox</groupId>
-									<artifactId>pdfbox</artifactId>
-									<version>1.8.2</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.tika</groupId>
-									<artifactId>tika-core</artifactId>
-									<version>1.4</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.tika</groupId>
-									<artifactId>tika-parsers</artifactId>
-									<version>1.4</version>
-								</artifactItem>
-								<artifactItem>
 									<groupId>com.google.guava</groupId>
 									<artifactId>guava</artifactId>
 									<version>${guava.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.mahout.commons</groupId>
-									<artifactId>commons-cli</artifactId>
-									<version>${commons.cli2.version}</version>
 								</artifactItem>
 								<artifactItem>
 									<groupId>commons-cli</groupId>
@@ -158,31 +131,6 @@
 									<groupId>org.apache.commons</groupId>
 									<artifactId>commons-math3</artifactId>
 									<version>${commons.math3.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>com.linkedin.datafu</groupId>
-									<artifactId>datafu</artifactId>
-									<version>${datafu.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.lucene</groupId>
-									<artifactId>lucene-core</artifactId>
-									<version>${lucene.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.lucene</groupId>
-									<artifactId>lucene-queries</artifactId>
-									<version>${lucene.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.lucene</groupId>
-									<artifactId>lucene-queryparser</artifactId>
-									<version>${lucene.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.lucene</groupId>
-									<artifactId>lucene-analyzers-common</artifactId>
-									<version>${lucene.version}</version>
 								</artifactItem>
 								<artifactItem>
 									<groupId>org.springframework</groupId>
@@ -285,70 +233,6 @@
 			<version>9.4.1212.jre6</version>
 		</dependency>
 
-		<!-- ================ -->
-		<!--  Apache Lucene   -->
-		<!-- ================ -->
-
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-core</artifactId>
-			<version>${lucene.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-queries</artifactId>
-			<version>${lucene.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-queryparser</artifactId>
-			<version>${lucene.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-analyzers-common</artifactId>
-			<version>${lucene.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>korean-analyzer</artifactId>
-			<version>20130430</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/lib/koreananalyzer.4x-20130430.jar</systemPath>
-		</dependency>
-
-		<!-- ============= -->
-		<!--  Apache Tika  -->
-		<!-- ============= -->
-
-		<dependency>
-			<groupId>org.apache.tika</groupId>
-			<artifactId>tika-core</artifactId>
-			<version>${tika.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.tika</groupId>
-			<artifactId>tika-parsers</artifactId>
-			<version>${tika.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>pdfbox</artifactId>
-			<version>${pdfbox.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>fontbox</artifactId>
-			<version>${pdfbox.version}</version>
-		</dependency>
-
 		<!-- ========= -->
 		<!--  Utility  -->
 		<!-- ========= -->
@@ -357,12 +241,6 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-math3</artifactId>
 			<version>${commons.math3.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.linkedin.datafu</groupId>
-			<artifactId>datafu</artifactId>
-			<version>${datafu.version}</version>
 		</dependency>
 
 		<!-- ============= -->
@@ -444,17 +322,6 @@
 		</dependency>
 	</dependencies>
 
-	<scm>
-		<connection>scm:git:https://github.com/fharenheit/template-mapreduce.git</connection>
-		<developerConnection>scm:git:https://github.com/fharenheit/template-mapreduce.git</developerConnection>
-		<url>https://github.com/fharenheit/template-mapreduce</url>
-	</scm>
-
-	<issueManagement>
-		<system>Github</system>
-		<url>https://github.com/fharenheit/template-mapreduce/issues</url>
-	</issueManagement>
-
 	<organization>
 		<name>Cloudine Inc</name>
 		<url>http://www.openflamingo.org</url>
@@ -468,7 +335,6 @@
 				<role>Manager</role>
 				<role>Commiter</role>
 			</roles>
-			<url>http://www.opencloudengine.org</url>
 			<email>fharenheit@gmail.com</email>
 		</developer>
 	</developers>

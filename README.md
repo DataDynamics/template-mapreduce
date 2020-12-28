@@ -1,18 +1,15 @@
-Flamingo Community의 MapReduce Job 템플릿 프로젝트
+MapReduce Job 템플릿 프로젝트
 ====================
 
 ## 환경 요구사항
 
-* JDK 1.6 이상
-  * JDK 1.6 Download : http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html
+* JDK 1.7 이상
 * Apache Maven 3.x 이상
   * Windows : http://ftp.daum.net/apache/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.zip
   * Linux, MacOSX : http://ftp.daum.net/apache/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz
 * Apache Ant 1.8 이상
   * Windows : http://ftp.daum.net/apache/ant/binaries/apache-ant-1.8.4-bin.zip
   * Linux, MacOSX : http://ftp.daum.net/apache/ant/binaries/apache-ant-1.8.4-bin.tar.gz
-* Eclipse (M2Eclipse 플러그인 설치 필요) 또는 IntelliJ IDEA
-  * M2Eclipse Update Site : http://download.eclipse.org/technology/m2e/releases
 
 ## 소스코드 빌드 및 MapReduce Job JAR 파일 패키징
 
@@ -22,18 +19,18 @@ Flamingo Community의 MapReduce Job 템플릿 프로젝트
 #mvn package
 [INFO]
 [INFO] ------------------------------------------------------------------------
-[INFO] Building Flamingo MapReduce Template 0.1-SNAPSHOT
+[INFO] Building MapReduce Template 0.1-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO]
 [INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ mapreduce-template ---
-[INFO] Deleting C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target
+[INFO] Deleting C:\Users\User\Desktop\mapreduce-template-0.1\target
 [INFO]
 [INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ mapreduce-template ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO]
 [INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ mapreduce-template ---
-[INFO] Compiling 40 source files to C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\classes
+[INFO] Compiling 40 source files to C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
 [INFO]
 [INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ mapreduce-template ---
 [debug] execute contextualize
@@ -41,15 +38,15 @@ Flamingo Community의 MapReduce Job 템플릿 프로젝트
 [INFO] Copying 0 resource
 [INFO]
 [INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ mapreduce-template ---
-[INFO] Compiling 1 source file to C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\test-classes
+[INFO] Compiling 1 source file to C:\Users\User\Desktop\mapreduce-template-0.1\target\test-classes
 [INFO]
 [INFO] --- maven-surefire-plugin:2.10:test (default-test) @ mapreduce-template ---
-[INFO] Surefire report directory: C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\surefire-reports
+[INFO] Surefire report directory: C:\Users\User\Desktop\mapreduce-template-0.1\target\surefire-reports
 
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
-Running org.openflamingo.mapreduce.etl.groupby.GroupByMapReduceTest
+Running io.datadynamics.bigdata.mapreduce.etl.groupby.GroupByMapReduceTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.6 sec
 
 Results :
@@ -62,21 +59,21 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Configured Artifact: org.apache.mahout.commons:commons-cli:2.0-mahout:jar
 [INFO] Configured Artifact: commons-cli:commons-cli:1.2:jar
 [INFO] Configured Artifact: commons-lang:commons-lang:2.5:jar
-[INFO] Unpacking C:\Users\Cloudine\.m2\repository\com\google\guava\guava\r09\guava-r09.jar to
-  C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\classes
+[INFO] Unpacking C:\Users\User\.m2\repository\com\google\guava\guava\r09\guava-r09.jar to
+  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
    with includes null and excludes:null
-[INFO] Unpacking C:\Users\Cloudine\.m2\repository\org\apache\mahout\commons\commons-cli\2.0-mahout\commons-cli-2.0-mahout.jar to
-  C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\classes
+[INFO] Unpacking C:\Users\User\.m2\repository\org\apache\mahout\commons\commons-cli\2.0-mahout\commons-cli-2.0-mahout.jar to
+  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
    with includes null and excludes:null
-[INFO] Unpacking C:\Users\Cloudine\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar to
-  C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\classes
+[INFO] Unpacking C:\Users\User\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar to
+  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
    with includes null and excludes:null
-[INFO] Unpacking C:\Users\Cloudine\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar to
-  C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\classes
+[INFO] Unpacking C:\Users\User\.m2\repository\commons-lang\commons-lang\2.5\commons-lang-2.5.jar to
+  C:\Users\User\Desktop\mapreduce-template-0.1\target\classes
    with includes null and excludes:null
 [INFO]
 [INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ mapreduce-template ---
-[INFO] Building jar: C:\Users\Cloudine\Desktop\mapreduce-template-0.1\target\mapreduce-template-0.1-SNAPSHOT.jar
+[INFO] Building jar: C:\Users\User\Desktop\mapreduce-template-0.1\target\mapreduce-template-0.1-SNAPSHOT.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -151,7 +148,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
 
 #### 형식1
 
-이 형식은 가장 단순하게 구현할 수 있는 방법으로 parseArguements() 메소드에서 파라미터를 처리합니다. 항상 파라미터명 다음에 파라미터의 값을 지정해야 합니다. 다음 예제는 org.openflamingo.mapreduce.sample.SampleDriver을 참고하시기 바랍니다.
+이 형식은 가장 단순하게 구현할 수 있는 방법으로 parseArguements() 메소드에서 파라미터를 처리합니다. 항상 파라미터명 다음에 파라미터의 값을 지정해야 합니다. 다음 예제는 io.datadynamics.bigdata.mapreduce.sample.SampleDriver을 참고하시기 바랍니다.
 
 ```java
 public class SampleDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
@@ -202,12 +199,12 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
 위 형식을 실행하려면 다음과 같이 커맨드를 실행합니다.
 
 ```text
-#hadoop jar <JAR_FILE> org.openflamingo.mapreduce.sample.SampleDriver -input <IN> -output <OUT> ..
+#hadoop jar <JAR_FILE> io.datadynamics.bigdata.mapreduce.sample.SampleDriver -input <IN> -output <OUT> ..
 ```
 
 #### 형식2
 
-이 형식은 복잡하지만 도움말과 필수 옵션을 처리할 수 있는 기능을 사용할 수 있습니다. 다음과 같이 작성합니다. 다음 예제는 org.openflamingo.mapreduce.sample.Sample2Driver을 참고 하시기 바랍니다.
+이 형식은 복잡하지만 도움말과 필수 옵션을 처리할 수 있는 기능을 사용할 수 있습니다. 다음과 같이 작성합니다. 다음 예제는 io.datadynamics.bigdata.mapreduce.sample.Sample2Driver을 참고 하시기 바랍니다.
 
 ```java
 public class Sample2Driver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
@@ -320,7 +317,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 위 형식을 실행하려면 다음과 같이 커맨드를 실행합니다.
 
 ```text
-#hadoop jar <JAR_FILE> org.openflamingo.mapreduce.sample.Sample2Driver --input <IN> --output <OUT> --delimiter <DELIMITER> ..
+#hadoop jar <JAR_FILE> io.datadynamics.bigdata.mapreduce.sample.Sample2Driver --input <IN> --output <OUT> --delimiter <DELIMITER> ..
 ```
 
 ### 커맨드 라인 파라미터에 JVM Args 넘기기
@@ -328,7 +325,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
 종종 MapReduce Job의 Configuration에 자동으로 값을 설정하고 싶을 때가 있습니다. 이 경우 형식2의 파라미터 처리를 이용하고 다음과 같이 커맨드 라인을 입력합니다.
 
 ```text
-#hadoop jar <JAR_FILE> org.openflamingo.mapreduce.sample.Sample2Driver -Dmapred.job.name="Test MapReduce Job" --input <IN> --output <OUT> --delimiter <DELIMITER> ..
+#hadoop jar <JAR_FILE> io.datadynamics.bigdata.mapreduce.sample.Sample2Driver -Dmapred.job.name="Test MapReduce Job" --input <IN> --output <OUT> --delimiter <DELIMITER> ..
 ```
 
 위 커맨드 라인 예제에서 -Dmapred.job.name="Test MapReduce Job"와 같이 파라미터를 추가하면 Jo의 Configuration에 알아서 추가됩니다. 단, -D 커맨드는 반드시 클래스명 뒤에서만 사용해야 합니다.
@@ -396,7 +393,7 @@ public class WordcountReducer extends Reducer<Text, IntWritable, Text, IntWritab
 MapReduce Job을 실행하는 Driver를 실행하려면 패키지명을 포함한 Driver 클래스명을 입력해야 합니다.
 
 ```text
-#hadoop jar <JAR_FILE> org.openflamingo.mapreduce.sample.SampleDriver ...
+#hadoop jar <JAR_FILE> io.datadynamics.bigdata.mapreduce.sample.SampleDriver ...
 ```
 
 생산성을 위해서 alias를 지정하도록 하여 패키지명을 포함한 Driver 클래스명을 입력의 수고를 덜 수 있습니다. 이를 위해서 com.yourcompany.hadoop.mapreduce.MapReduceDriver 클래스를 다음과 같이 추가하면 됩니다. com.yourcompany.hadoop.mapreduce.MapReduceDriver을 Program Driver라고 합니다.
