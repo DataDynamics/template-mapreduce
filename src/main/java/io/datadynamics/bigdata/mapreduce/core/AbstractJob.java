@@ -59,9 +59,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * <p/>
  * <ul>
  * <li>-Dmapreduce.job.name=(name): Hadoop MapReduce Job의 이름. 기본으로 Driver 클래스명으로 설정.</li>
- * <li>-Dmapred.output.compress={true,false}: 출력 압축 여부 (기본값 true)</li>
- * <li>-Dmapred.input.dir=(path): 입력 파일 또는 입력 디렉토리 (필수)</li>
- * <li>-Dmapred.output.dir=(path): 출력 파일 (필수)</li>
+ * <li>-Dmapreduce.output.compress={true,false}: 출력 압축 여부 (기본값 true)</li>
+ * <li>-Dmapreduce.input.dir=(path): 입력 파일 또는 입력 디렉토리 (필수)</li>
+ * <li>-Dmapreduce.output.dir=(path): 출력 파일 (필수)</li>
  * </ul>
  * <tt>-D</tt>로 시작하는 모든 파라미터는 반드시 그렇지 않은 다른 파라미터 보다 앞서 사용해야 한다.
  */
@@ -431,7 +431,7 @@ public abstract class AbstractJob extends Configured implements Tool {
      * 앞서서 사용할 수 있다.
      *
      * @param cmdLine 커맨드 라인
-     * @throws IllegalArgumentException inputOption 또는 {@code --input}와 {@code -Dmapred.input dir} 둘 줄 하나라도 존재하지 않는 경우, outputOption 또는 {@code --output}와 {@code -Dmapred.output dir} 둘 줄 하나라도 존재하지 않는 경우,
+     * @throws IllegalArgumentException inputOption 또는 {@code --input}와 {@code -Dmapreduce.input dir} 둘 줄 하나라도 존재하지 않는 경우, outputOption 또는 {@code --output}와 {@code -Dmapreduce.output dir} 둘 줄 하나라도 존재하지 않는 경우,
      */
     protected void parseDirectories(CommandLine cmdLine) {
         Configuration conf = getConf();
@@ -455,8 +455,8 @@ public abstract class AbstractJob extends Configured implements Tool {
             this.tempPath = new Path(conf.get("tempDir"));
         }
 
-        Preconditions.checkArgument(inputOption == null || inputPath != null, "입력 디렉토리가 지정되어 있지 않거나 -Dmapred.input.dir 파라미터가 잘못 지정되어 있습니다. -Dmapred.input.dir 옵션은 다른 옵션을 사용하기 전에 제일 앞에 사용해야 합니다.");
-        Preconditions.checkArgument(outputOption == null || outputPath != null, "출력 디렉토리가 지정되어 있지 않거나 -Dmapred.output.dir 파라미터가 잘못 지정되어 있습니다. -Dmapred.input.dir 옵션은 다른 옵션을 사용하기 전에 제일 앞에 사용해야 합니다.");
+        Preconditions.checkArgument(inputOption == null || inputPath != null, "입력 디렉토리가 지정되어 있지 않거나 -Dmapreduce.input.dir 파라미터가 잘못 지정되어 있습니다. -Dmapreduce.input.dir 옵션은 다른 옵션을 사용하기 전에 제일 앞에 사용해야 합니다.");
+        Preconditions.checkArgument(outputOption == null || outputPath != null, "출력 디렉토리가 지정되어 있지 않거나 -Dmapreduce.output.dir 파라미터가 잘못 지정되어 있습니다. -Dmapreduce.input.dir 옵션은 다른 옵션을 사용하기 전에 제일 앞에 사용해야 합니다.");
     }
 
     protected static void maybePut(Map<String, String> args, CommandLine cmdLine, Option... opt) {

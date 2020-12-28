@@ -65,7 +65,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
     }
 
     public int run(String[] args) throws Exception {
-        Job job = new Job();
+        Job job = Job.getInstance();
 
         int result = parseArguments(args, job);
         if (result != 0) {

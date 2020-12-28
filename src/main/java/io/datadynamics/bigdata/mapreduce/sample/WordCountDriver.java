@@ -41,7 +41,7 @@ public class WordCountDriver extends org.apache.hadoop.conf.Configured implement
     }
 
     public int run(String[] args) throws Exception {
-        Job job = new Job();
+        Job job = Job.getInstance();
         parseArguments(args, job);
 
         job.setJarByClass(WordCountDriver.class);

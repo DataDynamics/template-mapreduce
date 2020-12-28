@@ -45,7 +45,7 @@ public class SampleDriver extends org.apache.hadoop.conf.Configured implements o
     }
 
     public int run(String[] args) throws Exception {
-        Job job = new Job();
+        Job job = Job.getInstance();
         parseArguments(args, job);
 
         job.setJarByClass(SampleDriver.class);
