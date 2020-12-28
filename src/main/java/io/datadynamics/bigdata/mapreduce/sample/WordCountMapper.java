@@ -28,8 +28,8 @@ import java.io.IOException;
 /**
  * Wordcount Mapper
  *
- * @version 0.1
  * @author Data Dynamics
+ * @version 0.1
  */
 public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 

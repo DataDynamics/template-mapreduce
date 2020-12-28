@@ -27,8 +27,8 @@ import java.io.IOException;
 /**
  * Sample Reducer
  *
- * @version 0.1
  * @author Data Dynamics
+ * @version 0.1
  */
 public class SampleReducer extends Reducer<Text, Text, NullWritable, Text> {
 
