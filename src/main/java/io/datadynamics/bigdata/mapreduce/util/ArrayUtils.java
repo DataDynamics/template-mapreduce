@@ -23,7 +23,6 @@ import java.util.*;
  * Array Utility.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class ArrayUtils {

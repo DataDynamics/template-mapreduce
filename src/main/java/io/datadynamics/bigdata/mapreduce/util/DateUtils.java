@@ -28,8 +28,7 @@ import java.util.*;
 /**
  * Date Utility.
  *
- * @@author Data Dynamics (Cloudine)
- * @author Seo Ji Hye (Cloudine)
+ * @@author Data Dynamics
  * @since 0.1
  */
 public class DateUtils {
@@ -509,7 +508,6 @@ public class DateUtils {
      * @param date
      * @return XMLGregorianCalendar
      * @throws javax.xml.datatype.DatatypeConfigurationException
-     *
      */
     public static XMLGregorianCalendar dateToXMLGregorianCalendar(Date date) throws DatatypeConfigurationException {
         if (date == null) return null;

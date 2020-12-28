@@ -18,6 +18,8 @@
 package io.datadynamics.bigdata.mapreduce.core;
 
 import com.google.common.base.Preconditions;
+import io.datadynamics.bigdata.mapreduce.util.CommandLineUtil;
+import io.datadynamics.bigdata.mapreduce.util.DefaultOptionCreator;
 import org.apache.commons.cli2.CommandLine;
 import org.apache.commons.cli2.Group;
 import org.apache.commons.cli2.Option;
@@ -32,8 +34,6 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.*;
 import org.apache.hadoop.util.Tool;
-import io.datadynamics.bigdata.mapreduce.util.CommandLineUtil;
-import io.datadynamics.bigdata.mapreduce.util.DefaultOptionCreator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +44,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Flamingo MapReduce의 모든 Hadoop Job Driver의 최상위 클래스.
+ * MapReduce의 모든 Hadoop Job Driver의 최상위 클래스.
  * 기본적으로 MapReduce Driver는 사용자의 커맨드 라인에서 입력받은 파라미터를 Map과 Reduce Task에서
  * 사용할 수 있도록 Hadoop Configuration에 설정해야 한다. 이 클래스는
  * 모든 MapReduce Driver가 커맨드 라인을 파싱하고 사용하기 위한 표준 규격을 제공해준다.
@@ -94,7 +94,7 @@ public abstract class AbstractJob extends Configured implements Tool {
 
     /**
      * {@link #parseArguments(String[])}을 통해 설정되는 MapReduce 임시 경로.
-     * 이 경로는 CLASSPATH의 <tt>flamingo-hadoop-site.xml</tt>에 <tt>tempDir</tt>로 지정되어 있는 값으로써
+     * 이 경로는 CLASSPATH의 <tt>mapreduce-site.xml</tt>에 <tt>tempDir</tt>로 지정되어 있는 값으로써
      * <tt>/temp/${user.home}</tt>을 기본으로 한다.
      */
     private Path tempPath;
@@ -116,7 +116,7 @@ public abstract class AbstractJob extends Configured implements Tool {
         options = new LinkedList<Option>();
         if (getConf() == null) {
             setConf(new Configuration());
-            // Flamingo MapReduce의 기본 설정 파일을 로딩하여 Hadoop Configuration을 구성한다.
+            // MapReduce의 기본 설정 파일을 로딩하여 Hadoop Configuration을 구성한다.
             getConf().addResource(getClass().getResource("/mapreduce-site.xml"));
         }
     }
@@ -167,7 +167,7 @@ public abstract class AbstractJob extends Configured implements Tool {
 
     /**
      * 임시 경로를 반환한다.
-     * 임시 경로를 표현하는 설정값인 {@link Constants#TEMP_DIR}은 CLASSPATH의 <tt>flamingo-mapreudce-site.xml</tt> 파일에 정의되어 있으나
+     * 임시 경로를 표현하는 설정값인 {@link Constants#TEMP_DIR}은 CLASSPATH의 <tt>mapreduce-site.xml</tt> 파일에 정의되어 있으나
      * 사용자가 직접 이 값을 수정하고자 하는 경우 커맨드 라인에서 <tt>--tempDir</tt>을 이용하여 지정할 수 있다.
      * 이 경우 이 메소드에서는 우선적으로 사용자가 설정한 것을 먼저 사용하게 된다.
      * 이 경우 Hadoop MapReduce Driver에서는 다음과 같이 코드를 작성하여 임시 디렉토리를 가져올 수 있다.
@@ -188,7 +188,7 @@ public abstract class AbstractJob extends Configured implements Tool {
 
     /**
      * 현재 시간을 기준으로 한 임시 경로를 반환한다. 날짜 패턴은
-     * <tt>flamingo-hadoop-site.xml</tt> 파일에 <tt>tempDir.date.pattern</tt>으로
+     * <tt>mapreduce-site.xml</tt> 파일에 <tt>tempDir.date.pattern</tt>으로
      * 설정할 수 있으며 기본으로 <tt>yyyyMMdd-HHmmss-SSS</tt>을 사용한다.
      *
      * @return 임시 경로
@@ -341,8 +341,8 @@ public abstract class AbstractJob extends Configured implements Tool {
      *
      * @param args 커맨드 라인 옵션
      * @return 인자와 인자에 대한 값을 포함하는 {@code Map<String,String>}.
-     *         인자의 key는 옵션명에 되며 옵션명은 '--'을 prefix로 갖는다.
-     *         따라서 옵션을 기준으로 {@code Map<String,String>} 에서 찾고자 하는 경우 반드시 옵션명에 '--'을 붙이도록 한다.
+     * 인자의 key는 옵션명에 되며 옵션명은 '--'을 prefix로 갖는다.
+     * 따라서 옵션을 기준으로 {@code Map<String,String>} 에서 찾고자 하는 경우 반드시 옵션명에 '--'을 붙이도록 한다.
      */
     public Map<String, String> parseArguments(String[] args) throws Exception {
         Option helpOpt = addOption(DefaultOptionCreator.helpOption());
@@ -450,7 +450,7 @@ public abstract class AbstractJob extends Configured implements Tool {
             this.outputPath = new Path(conf.get("mapred.output.dir"));
         }
 
-        // Temporary Path를 설정한다. 기본값은 CLASSPATH의 <tt>flamingo-hadoop-site.xml</tt> 파일에 있는 값을 사용한다.
+        // Temporary Path를 설정한다. 기본값은 CLASSPATH의 <tt>mapreduce-site.xml</tt> 파일에 있는 값을 사용한다.
         if (tempPath == null && conf.get("tempDir") != null) {
             this.tempPath = new Path(conf.get("tempDir"));
         }

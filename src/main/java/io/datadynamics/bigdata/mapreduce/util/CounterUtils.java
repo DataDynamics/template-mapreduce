@@ -29,7 +29,6 @@ import java.util.Map;
  * Hadoop MapReduce Counter Utility.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class CounterUtils {
@@ -74,8 +73,8 @@ public class CounterUtils {
         Map<String, String> resultMap = new HashMap<String, String>();
         try {
             Counters counters = job.getCounters();
-	        Iterable<String> groupNames = counters.getGroupNames();
-	        Iterator<String> groupIterator = groupNames.iterator();
+            Iterable<String> groupNames = counters.getGroupNames();
+            Iterator<String> groupIterator = groupNames.iterator();
             while (groupIterator.hasNext()) {
                 String groupName = groupIterator.next();
                 CounterGroup group = counters.getGroup(groupName);

@@ -27,7 +27,6 @@ import java.io.*;
  * File Utility.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class FileUtils {
@@ -203,7 +202,7 @@ public class FileUtils {
     public static File createTestDir(Class<?> clazz) throws IOException {
         String systemTmpDir = System.getProperty("java.io.tmpdir");
         long simpleRandomLong = (long) (Long.MAX_VALUE * Math.random());
-        File testTempDir = new File(systemTmpDir, "flamingo-" + clazz.getClass().getSimpleName() + '-' + simpleRandomLong);
+        File testTempDir = new File(systemTmpDir, "mapreduce-" + clazz.getClass().getSimpleName() + '-' + simpleRandomLong);
         if (!testTempDir.mkdir()) {
             throw new IOException("임시 디렉토리를 생성할 수 없습니다: " + testTempDir);
         }

@@ -28,7 +28,6 @@ import java.util.List;
  * Mathmatics Utility.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class MathUtils {

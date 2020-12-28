@@ -27,7 +27,6 @@ import java.util.List;
  * String Utility.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class StringUtils {
@@ -195,7 +194,7 @@ public class StringUtils {
      *
      * @param str the String to check, may be null
      * @return <code>true</code> if the String is
-     *         not empty and not null and not whitespace
+     * not empty and not null and not whitespace
      * @since 2.0
      */
     public static boolean isNotBlank(String str) {

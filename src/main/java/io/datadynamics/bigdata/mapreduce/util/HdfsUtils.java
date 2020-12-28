@@ -17,13 +17,13 @@
  */
 package io.datadynamics.bigdata.mapreduce.util;
 
+import io.datadynamics.bigdata.mapreduce.util.filter.BypassPathFilter;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.*;
 import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.*;
 import org.apache.hadoop.hdfs.DFSClient;
 import org.apache.hadoop.hdfs.protocol.HdfsFileStatus;
 import org.apache.hadoop.mapreduce.InputSplit;
-import io.datadynamics.bigdata.mapreduce.util.filter.BypassPathFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +37,6 @@ import java.util.List;
  * HDFS Utility.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class HdfsUtils {

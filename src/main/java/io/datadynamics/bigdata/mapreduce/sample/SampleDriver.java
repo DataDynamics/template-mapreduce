@@ -34,8 +34,8 @@ import java.io.IOException;
  *     #hadoop jar JAR_FILE CLASS -libjars LIB_JAR COMMAND_OPTS
  * </pre>
  *
- * @@author Data Dynamics
  * @version 0.1
+ * @@author Data Dynamics
  */
 public class SampleDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
 

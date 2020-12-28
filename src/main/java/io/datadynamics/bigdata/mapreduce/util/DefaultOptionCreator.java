@@ -22,9 +22,9 @@ import org.apache.commons.cli2.builder.ArgumentBuilder;
 import org.apache.commons.cli2.builder.DefaultOptionBuilder;
 
 /**
- * Command Line Defaut Option Creator for MapReduce Job.
+ * Command Line Default Option Creator for MapReduce Job.
  *
- * @@author Data Dynamics (Cloudine)
+ * @@author Data Dynamics
  * @since 0.1
  */
 public class DefaultOptionCreator {

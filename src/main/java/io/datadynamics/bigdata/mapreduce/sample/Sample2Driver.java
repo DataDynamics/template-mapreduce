@@ -17,6 +17,7 @@
  */
 package io.datadynamics.bigdata.mapreduce.sample;
 
+import io.datadynamics.bigdata.mapreduce.util.HdfsUtils;
 import org.apache.commons.cli.*;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.NullWritable;
@@ -25,13 +26,12 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.ToolRunner;
-import io.datadynamics.bigdata.mapreduce.util.HdfsUtils;
 
 /**
  * Command Line Parser를 이용한 Hadoop MapReduce Sample Driver.
  *
- * @@author Data Dynamics
  * @version 0.1
+ * @@author Data Dynamics
  */
 public class Sample2Driver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
 
@@ -96,7 +96,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
         Options options = getOptions();
         HelpFormatter formatter = new HelpFormatter();
         if (args.length == 0) {
-            formatter.printHelp("org.openflamingo.hadoop jar <JAR> " + getClass().getName(), options, true);
+            formatter.printHelp("hadoop jar <JAR> " + getClass().getName(), options, true);
             return -1;
         }
 
@@ -107,7 +107,7 @@ public class Sample2Driver extends org.apache.hadoop.conf.Configured implements 
         // 파라미터를 검증한다.
         for (String[] requiredOption : requiredOptions) {
             if (!cmd.hasOption(requiredOption[0])) {
-                formatter.printHelp("org.openflamingo.hadoop jar <JAR> " + getClass().getName(), options, true);
+                formatter.printHelp("hadoop <JAR> " + getClass().getName(), options, true);
                 return -1;
             }
         }

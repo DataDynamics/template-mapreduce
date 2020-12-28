@@ -29,6 +29,7 @@ import java.util.Map;
  * generic classes, not interfaces.
  */
 public class ReflectionUtils {
+
     /**
      * Do not instantiate.
      */

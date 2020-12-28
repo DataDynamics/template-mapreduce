@@ -25,7 +25,6 @@ import java.util.Map;
  * Hadoop MapReduce Metrics Resource Bundle.
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class HadoopMetrics {

@@ -30,7 +30,7 @@ import java.io.PrintWriter;
 /**
  * Command Line Utility.
  *
- * @@author Data Dynamics (Cloudine)
+ * @@author Data Dynamics
  * @since 0.1
  */
 public final class CommandLineUtil {

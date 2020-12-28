@@ -17,30 +17,37 @@
  */
 package io.datadynamics.bigdata.mapreduce.sample;
 
-import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
+import java.util.Iterator;
 
-public class FlamingoIntegratedMapper extends Mapper<LongWritable, Text, NullWritable, Text> {
+/**
+ * Wordcount Reducer
+ *
+ * @version 0.1
+ * @@author Data Dynamics
+ */
+public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     @Override
     protected void setup(Context context) throws IOException, InterruptedException {
     }
 
     @Override
-    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        context.write(NullWritable.get(), value);
+    protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+        Iterator<IntWritable> iterator = values.iterator();
+        int sum = 0;
+        while (iterator.hasNext()) {
+            IntWritable one = iterator.next();
+            sum += one.get();
+        }
+        context.write(key, new IntWritable(sum));
     }
 
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
+    }
 }
-
-
-
-
-
-
-
-

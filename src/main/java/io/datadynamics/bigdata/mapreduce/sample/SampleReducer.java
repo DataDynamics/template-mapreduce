@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-        package io.datadynamics.bigdata.mapreduce.sample;
+package io.datadynamics.bigdata.mapreduce.sample;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.NullWritable;
@@ -27,8 +27,8 @@ import java.io.IOException;
 /**
  * Sample Reducer
  *
- * @@author Data Dynamics
  * @version 0.1
+ * @@author Data Dynamics
  */
 public class SampleReducer extends Reducer<Text, Text, NullWritable, Text> {
 

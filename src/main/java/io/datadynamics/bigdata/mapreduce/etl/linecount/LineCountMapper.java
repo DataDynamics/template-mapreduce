@@ -17,14 +17,14 @@
  */
 package io.datadynamics.bigdata.mapreduce.etl.linecount;
 
+import io.datadynamics.bigdata.mapreduce.core.Constants;
+import io.datadynamics.bigdata.mapreduce.util.CounterUtils;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
-import io.datadynamics.bigdata.mapreduce.core.Constants;
-import io.datadynamics.bigdata.mapreduce.util.CounterUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +43,6 @@ import java.io.IOException;
  * </pre>
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class LineCountMapper extends Mapper<LongWritable, Text, NullWritable, NullWritable> {

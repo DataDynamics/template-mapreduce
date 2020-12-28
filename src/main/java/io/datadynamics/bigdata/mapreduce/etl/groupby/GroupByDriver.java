@@ -17,14 +17,14 @@
  */
 package io.datadynamics.bigdata.mapreduce.etl.groupby;
 
+import io.datadynamics.bigdata.mapreduce.core.AbstractJob;
+import io.datadynamics.bigdata.mapreduce.core.Delimiter;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.util.ToolRunner;
-import io.datadynamics.bigdata.mapreduce.core.AbstractJob;
-import io.datadynamics.bigdata.mapreduce.core.Delimiter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +45,6 @@ import static io.datadynamics.bigdata.mapreduce.core.Constants.JOB_SUCCESS;
  * </ul>
  *
  * @@author Data Dynamics
- * @author Seo Ji Hye
  * @since 0.1
  */
 public class GroupByDriver extends AbstractJob {

@@ -17,9 +17,9 @@
  */
 package io.datadynamics.bigdata.mapreduce.core;
 
-import org.apache.hadoop.io.Text;
 import io.datadynamics.bigdata.mapreduce.util.ArrayUtils;
 import io.datadynamics.bigdata.mapreduce.util.StringUtils;
+import org.apache.hadoop.io.Text;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -18,9 +18,8 @@
 package com.yourcompany.hadoop.mapreduce;
 
 import com.yourcompany.hadoop.mapreduce.aggregate.UnionDriver;
-import org.apache.hadoop.util.ProgramDriver;
 import io.datadynamics.bigdata.mapreduce.core.Constants;
-import io.datadynamics.bigdata.mapreduce.sample.FlamingoIntegratedDriver;
+import org.apache.hadoop.util.ProgramDriver;
 
 /**
  * 모든 MapReduce를 실행하기 위한 Alias를 제공하는 Program Driver.
@@ -33,9 +32,7 @@ public class MapReduceDriver {
     public static void main(String argv[]) {
         ProgramDriver programDriver = new ProgramDriver();
         try {
-            programDriver.addClass("pdf", io.datadynamics.bigdata.mapreduce.sample.PdfTextExtractionDriver.class, "PDF Text Extraction MapReduce Job");
             programDriver.addClass("union", UnionDriver.class, "File Union MapReduce Job");
-            programDriver.addClass("flamingo", FlamingoIntegratedDriver.class, "Flamingo Integrated MapReduce Job");
             programDriver.driver(argv);
             System.exit(Constants.JOB_SUCCESS);
         } catch (Throwable e) {

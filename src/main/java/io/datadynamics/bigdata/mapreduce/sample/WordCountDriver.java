@@ -30,8 +30,8 @@ import java.io.IOException;
 /**
  * Wordcount 예제.
  *
- * @@author Data Dynamics
  * @version 0.1
+ * @@author Data Dynamics
  */
 public class WordCountDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {
 
@@ -47,8 +47,8 @@ public class WordCountDriver extends org.apache.hadoop.conf.Configured implement
         job.setJarByClass(WordCountDriver.class);
 
         // Mapper & Reducer Class
-        job.setMapperClass(WordcountMapper.class);
-        job.setReducerClass(WordcountReducer.class);
+        job.setMapperClass(WordCountMapper.class);
+        job.setReducerClass(WordCountReducer.class);
 
         // Mapper Output Key & Value Type after Hadoop 0.20
         job.setMapOutputKeyClass(Text.class);

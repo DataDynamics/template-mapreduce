@@ -23,7 +23,7 @@ package io.datadynamics.bigdata.mapreduce.util;
 public class MemoryUtils {
 
     /**
-     * Get stringified runtime memory stats
+     * Get stringfied runtime memory stats
      *
      * @return String of all Runtime stats.
      */
