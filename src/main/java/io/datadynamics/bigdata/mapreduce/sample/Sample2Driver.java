@@ -30,7 +30,7 @@ import io.datadynamics.bigdata.mapreduce.util.HdfsUtils;
 /**
  * Command Line Parser를 이용한 Hadoop MapReduce Sample Driver.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @version 0.1
  */
 public class Sample2Driver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {

@@ -44,7 +44,7 @@ import static io.datadynamics.bigdata.mapreduce.core.Constants.JOB_SUCCESS;
  * <li><tt>valueDelimiter (vd)</tt> - Group By시 아이템간 구분자 (선택) (기본값 ,)</li>
  * </ul>
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

@@ -24,7 +24,7 @@ import io.datadynamics.bigdata.mapreduce.etl.groupby.GroupByDriver;
 /**
  * 모든 MapReduce를 실행하기 위한 Alias를 제공하는 Program Driver.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @since 0.1
  */
 public class MapReduceDriver {

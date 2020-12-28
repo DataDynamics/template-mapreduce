@@ -23,7 +23,7 @@ import org.apache.hadoop.fs.PathFilter;
 /**
  * 지정한 경로의 모든 파일을 그대로 처리하는 파일 필터.
  *
- * @author Edward KIM (Cloudine)
+ * @@author Data Dynamics (Cloudine)
  * @since 0.1
  */
 public class BypassPathFilter implements PathFilter {

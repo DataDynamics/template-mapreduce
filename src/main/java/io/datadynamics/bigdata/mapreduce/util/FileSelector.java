@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.util;
 /**
  * 지정한 파일에 대해서 업로드할 HDFS의 Directory를 반환하는 File Selector.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

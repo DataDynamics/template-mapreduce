@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * 하나 이상의 File Selector를 이용하여 지정한 파일의 Upload할 HDFS 경로를 반환하는 File Selector Chain.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

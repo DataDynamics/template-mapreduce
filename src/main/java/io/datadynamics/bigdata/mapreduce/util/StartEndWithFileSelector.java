@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.util;
 /**
  * 지정한 파일의 시작/종료 패턴에 부합하는지 확인한 후 부합하는 경우 업로드할 HDFS의 Directory를 반환하는 File Selector.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

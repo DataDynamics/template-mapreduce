@@ -29,7 +29,7 @@ import java.util.List;
 
 
 /**
- * @author Edward KIM
+ * @@author Data Dynamics
  * @since 0.3
  */
 public class Lucene4Utils {

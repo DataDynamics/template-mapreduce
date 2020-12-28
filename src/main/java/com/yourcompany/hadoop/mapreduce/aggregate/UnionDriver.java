@@ -34,7 +34,7 @@ import java.io.IOException;
  *     #hadoop jar JAR_FILE CLASS -libjars LIB_JAR COMMAND_OPTS
  * </pre>
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @version 0.1
  */
 public class UnionDriver extends org.apache.hadoop.conf.Configured

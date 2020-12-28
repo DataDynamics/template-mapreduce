@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.util;
 /**
  * Description.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @since 1.0
  */
 public class ExpressionUtils {

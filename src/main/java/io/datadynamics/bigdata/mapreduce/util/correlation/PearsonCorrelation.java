@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.util.correlation;
 /**
  * Pearson Correlation.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @since 0.1
  */
 public class PearsonCorrelation {

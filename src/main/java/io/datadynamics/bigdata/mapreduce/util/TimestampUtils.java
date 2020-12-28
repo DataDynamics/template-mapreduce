@@ -22,7 +22,7 @@ import java.util.Date;
 /**
  * 타임 스탬프를 생성하는 Timestamp Utility.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.2
  */

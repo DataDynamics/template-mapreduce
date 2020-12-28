@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * Sample Mapper
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @version 0.1
  */
 public class SampleMapper extends Mapper<LongWritable, Text, NullWritable, Text> {

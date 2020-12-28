@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * 지정한 키로 Group By하여 하나의 로우로 키와 값을 취합하는 GroupBy ETL Mapper.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

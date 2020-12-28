@@ -42,7 +42,7 @@ import java.io.IOException;
  *     counter.increment(1);
  * </pre>
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

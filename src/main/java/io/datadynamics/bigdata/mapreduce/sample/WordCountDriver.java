@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * Wordcount 예제.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @version 0.1
  */
 public class WordCountDriver extends org.apache.hadoop.conf.Configured implements org.apache.hadoop.util.Tool {

@@ -20,7 +20,7 @@ package io.datadynamics.bigdata.mapreduce.core;
 /**
  * 범용적으로 사용하는 구분자를 표현하는 Enumeration.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * 지정한 키로 Group By하여 하나의 ROW 키와 값을 취합하는 Transpose ETL 리듀서
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

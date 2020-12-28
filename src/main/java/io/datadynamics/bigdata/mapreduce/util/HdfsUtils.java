@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * HDFS Utility.
  *
- * @author Edward KIM
+ * @@author Data Dynamics
  * @author Seo Ji Hye
  * @since 0.1
  */

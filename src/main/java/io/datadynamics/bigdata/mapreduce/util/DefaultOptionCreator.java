@@ -24,7 +24,7 @@ import org.apache.commons.cli2.builder.DefaultOptionBuilder;
 /**
  * Command Line Defaut Option Creator for MapReduce Job.
  *
- * @author Edward KIM (Cloudine)
+ * @@author Data Dynamics (Cloudine)
  * @since 0.1
  */
 public class DefaultOptionCreator {

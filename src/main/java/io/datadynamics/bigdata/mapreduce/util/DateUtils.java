@@ -28,7 +28,7 @@ import java.util.*;
 /**
  * Date Utility.
  *
- * @author Edward KIM (Cloudine)
+ * @@author Data Dynamics (Cloudine)
  * @author Seo Ji Hye (Cloudine)
  * @since 0.1
  */
